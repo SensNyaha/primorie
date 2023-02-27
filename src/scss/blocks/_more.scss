@@ -1,0 +1,211 @@
+.more {
+    &__top {
+        padding: 55px 29px 15px;
+
+        min-height: 163px;
+
+        position: relative;
+        &-bg {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+
+            filter:brightness(0.6)
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+
+        color: #FFFFFF;
+    }
+    &__subtitle {
+        max-width: 395px;
+
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+    }
+    &__request {
+        display: flex;
+
+
+        min-height: 65px;
+
+        &-info {
+            width: 50%;
+            padding: 9px 23px;
+
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 22px;
+
+            color: #737572;
+
+            background: #E8E8E8;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        &-more {
+            width: 50%;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 25px;
+            text-transform: uppercase;
+            text-align: center;
+
+            color: #FFFFFF;
+
+            background: #74C4CF;
+            
+            transition: all 0.5s;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                color: #FFFFFF;
+                background: #62a1a9;
+            }
+        }
+    }
+    &__text {
+        padding: 17px 40px 17px 25px;
+
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #000000;
+    }
+    &__list {
+        margin-top: 18px;
+
+        padding-left: 22px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    &__li {
+        list-style-type: circle;
+    }
+    &__why {
+        &-title {
+            padding: 35px;
+            margin-bottom: 0;
+
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+
+            color: #445469;
+            background: #E8E8E8;
+        }
+    }
+    &__block {
+        display: flex;
+        justify-content: center;
+
+        &-item {
+            padding: 15px;
+
+            width: 33.33%;
+            background: #FFFFFF;
+            border: 1px solid #ADADAD;
+        }
+        &-title {
+            margin-top: 14px;
+
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+
+            color: #445469;
+        }
+        &-descr {
+            margin-top: 14px;
+
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+
+            color: #445469;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .more {
+        &__top {
+            padding: 35px 10px 15px;
+
+            min-height: 120px;
+        }
+        &__title {
+            font-size: 36px;
+            line-height: 42px;
+            word-break: break-all;
+        }
+        &__subtitle {
+            font-size: 18px;
+            line-height: 21px;
+        }
+        &__request {
+            padding: 15px;
+
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            background: #e8e8e8;
+
+            &-info, &-more {
+                width: 80%;
+                min-height: 55px;
+            }
+            &-more {
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+        &__text {
+            padding: 17px 15px;
+
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &__list {
+            gap: 8px;
+        }
+        &__why {
+            &-title {
+                padding: 25px;
+
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+        &__block {
+            flex-direction: column;
+
+            &-item {
+                width: 100%;
+
+                text-align: center;
+            }
+        }
+    }
+}

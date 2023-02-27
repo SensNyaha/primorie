@@ -1,0 +1,204 @@
+.serv-card {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__inner {
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 14px;
+        right: 14px;
+        background: rgba(255, 255, 255, 0.67);
+
+        padding: 27px 41px;
+
+        transition: all 0.5s;
+    }
+    &__num {
+        font-family: 'PT Serif Caption';
+
+        width: 38px;
+        height: 38px;
+        border: 3px solid #74C4CF;
+
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+
+        color: #74C4CF;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        max-width: 400px;
+
+        margin-top: 18px;
+
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 56px;
+
+        color: #445469;
+
+        &_small {
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+    &__descr {
+        max-width: 400px;
+
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #445469;
+    }
+    &__controls {
+        position: absolute;
+        top: 100%;
+
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+        
+        transition: all 0.5s;
+    }
+    &__more, &__discuss {
+        width: 50%;
+
+        padding-top: 15px;
+        padding-bottom: 13px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #FFFFFF;
+        border: none;
+
+        transition: all 0.5s;
+
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background: #52729b;
+            color: #FFFFFF;
+        }
+    }
+    &__more {
+        background: #445469;
+    }
+    &__discuss {
+        background: #74C4CF;
+    }
+
+    &:hover {
+        .serv-card__controls {
+            transform: translateY(-100%);
+        }
+        .serv-card__inner {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        padding: 43px;
+        
+        background: #E8E8E8;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #74C4CF;
+    }
+    &__quote {
+        margin-top: 28px;
+
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 32px;
+
+        color: #737572;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .serv-card {
+        &__inner {
+            padding: 20px 30px;
+        }
+        &__title {
+            &_small {
+                font-size: 32px;
+                line-height: 38px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .serv-card {
+        &__inner {
+            top: 6px;
+            left: 9px;
+            bottom: 6px;
+            right: 9px;
+        }
+
+        &__title {
+            font-size: 28px;
+            line-height: 34px;
+        }
+        &__descr {
+            font-size: 15px;
+            line-height: 18px;
+        }
+        &__more, &__discuss {
+            padding-top: 12px;
+            padding-bottom: 10px;
+
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__back {
+            padding: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__quote {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
